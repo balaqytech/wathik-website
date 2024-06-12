@@ -1,0 +1,15 @@
+---
+// Image.astro
+const { src, alt = '', class: additionalClasses = '', ...props } = Astro.props;
+
+// Check if `src` is provided
+if (!src) {
+  throw new Error('The `src` attribute is required for the Image component.');
+}
+
+// Default classes for the image
+const defaultClasses = 'max-w-full h-auto rounded-tl-xl rounded-br-xl';
+const combinedClasses = `${defaultClasses} ${additionalClasses}`;
+---
+
+<img src={src} alt={alt} class={combinedClasses} {...props} />

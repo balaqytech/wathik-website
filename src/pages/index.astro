@@ -1,9 +1,282 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+import SubTitle from "../components/SubTitle.astro";
+import Title from "../components/Title.astro";
+import Checkbox from "../components/Checkbox.astro";
+import Email from "../components/Email.astro";
+import Phone from "../components/Phone.astro";
+import Facebook from "../components/Facebook.astro";
+import Youtube from "../components/Youtube.astro";
+import Whatsapp from "../components/Whatsapp.astro";
+import Client from "../components/Client.astro";
 ---
 
 <Layout title="نظام وثيق.">
 	<main>
-		<h1>hello world</h1>
+		<!-- Home Section -->
+		<section
+			id="home"
+			class="flex flex-col justify-center items-center gap-8 bg-gradient-to-b from-primary to-accent min-h-screen pt-52 pb-96 px-4"
+		>
+			<div
+				class="flex flex-col justify-center items-center gap-8 max-w-2xl"
+			>
+				<SubTitle class="bg-white text-primary"> نظام وثيق </SubTitle>
+				<h1 class="text-white font-bold text-3xl">
+					وثيق.. النظام الأكثر ثقة
+				</h1>
+				<p class="text-gray-200 text-center">
+					نظام وثيق صمم خصيصاً ليتناسب مع احتياجات ومتطلبات وكالات
+					السفريات والسياحة والحج والعمرة، يتيح لك النظام تحكم كامل في
+					فواتيرك، إدارة السندات والمقبوضات والمصروفات، وإدارة الرحلات
+					والمسافرين.
+				</p>
+
+				<div
+					class="container flex flex-col lg:flex-row justify-around items-center gap-8"
+				>
+					<Button href="#demo" class="text-primary bg-white hover:bg-primary hover:text-white flex gap-1">
+						<span>تجربة النظام</span>
+						<svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11V8L15 12L10 16V13H1V11H10ZM2.4578 15H4.58152C5.76829 17.9318 8.64262 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C8.64262 4 5.76829 6.06817 4.58152 9H2.4578C3.73207 4.94289 7.52236 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C7.52236 22 3.73207 19.0571 2.4578 15Z"></path></svg>
+					</Button>
+					<Button href="#" class="text-white bg-gray-700 hover:bg-primary hover:text-white flex gap-1">
+						<span>فيديو تعريفي</span>
+						<svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.9934C3 3.44476 3.44495 3 3.9934 3H20.0066C20.5552 3 21 3.44495 21 3.9934V20.0066C21 20.5552 20.5551 21 20.0066 21H3.9934C3.44476 21 3 20.5551 3 20.0066V3.9934ZM10.6219 8.41459C10.5562 8.37078 10.479 8.34741 10.4 8.34741C10.1791 8.34741 10 8.52649 10 8.74741V15.2526C10 15.3316 10.0234 15.4088 10.0672 15.4745C10.1897 15.6583 10.4381 15.708 10.6219 15.5854L15.5008 12.3328C15.5447 12.3035 15.5824 12.2658 15.6117 12.2219C15.7343 12.0381 15.6846 11.7897 15.5008 11.6672L10.6219 8.41459Z"></path></svg>
+					</Button>
+				</div>
+			</div>
+		</section>
+		<!-- Image section  -->
+		<section class="wrapper">
+			<img
+				class="rounded-xl border-4 border-white shadow-lg -mt-80"
+				src="/images/demo-wathik-invoices.jpg"
+				alt=""
+			/>
+		</section>
+		<!-- Features Section  -->
+		<section
+			id="features"
+		>
+			<div class="wrapper flex flex-col justify-center items-center">
+				<SubTitle class="bg-accent text-white"> خصائص النظام</SubTitle>
+				<Title class="text-primary"
+					>نظام مصمم بشكل متناسب لـجميع مكاتب السفر والنقل</Title
+				>
+			</div>
+		</section>
+		<!-- Clients Sections -->
+		<section
+			id="clients"
+			class="py-16"
+			style="background-image: url(/images/pattern-background.jpg); background-size: 350px;"
+		>
+			<div
+				class="wrapper grid grid-cols-1 lg:grid-cols-2 items-center gap-16"
+			>
+				<div class="flex flex-col items-start gap-4">
+					<SubTitle class="bg-white text-primary">عملاؤنا</SubTitle>
+					<Title class="text-white">
+						الخيار الأول والأفضل لإدارة شركات السفريات والسياحة
+						والأيدي العاملة
+					</Title>
+					<p class="text-slate-200 text-justify">
+						بضغطة زر أنشئ فواتير واستخرج تقاريرك وسجل مقبوضاتك وحدد
+						المصروفات وتابع حركة الصندوق من نفس النظام وبسلاسة تامة.
+					</p>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+						<div
+							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
+						>
+							<div class="text-primary text-7xl font-bold">
+								50+
+							</div>
+							<span>عميل</span>
+						</div>
+						<div
+							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
+						>
+							<div class="text-primary text-7xl font-bold">
+								50+
+							</div>
+							<span>عميل</span>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+					<Client src="/images/clients/client-1.jpg" />
+					<Client src="/images/clients/client-2.jpg" />
+					<Client src="/images/clients/client-3.jpg" />
+					<Client src="/images/clients/client-4.jpg" />
+					<Client src="/images/clients/client-5.jpg" />
+					<Client src="/images/clients/client-6.jpg" />
+				</div>
+			</div>
+		</section>
+		<!-- Roles Section -->
+		<section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-16">
+			<div>
+				<img src="/images/demo-wathik-invoices.jpg" alt="" />
+			</div>
+			<div class="flex flex-col items-start gap-4">
+				<SubTitle class="bg-accent text-white">الأدوار</SubTitle>
+				<Title class="text-primary"
+					>سرّع من وتيرة أعمالك مع مساعدك الذكي (نظام وثيق)</Title
+				>
+				<ul>
+					<li class="flex items-start gap-2">
+						<span class="text-primary w-5 h-5 flex relative top-1">
+							<Checkbox />
+						</span>
+						اختصر وقتك وجهدك وأدر عدد من الفواتير المختلفة
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary w-5 h-5 flex relative top-1">
+							<Checkbox />
+						</span>
+						تتبع جميع العمليات والتقارير المتكاملة لحركة المبيعات اليومية
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary w-5 h-5 flex relative top-1">
+							<Checkbox />
+						</span>
+						خصص واضبط مقبوضات ومصروفات الشركة
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary w-5 h-5 flex relative top-1">
+							<Checkbox />
+						</span>
+						أصدر بيانات الرحلات وحدد قوائم المسافرين
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-primary w-5 h-5 flex relative top-1">
+							<Checkbox />
+						</span>
+						أضف عدد من وكلات السفر والوجهات
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- Demo Section -->
+		<section
+			id="demo"
+			class="container max-w-6xl mx-auto flex flex-col items-center justify-center gap-4 p-12 rounded-tl-3xl rounded-br-3xl text-white"
+			style="background-image: url(/images/pattern-background.jpg); background-size: 350px;"
+		>
+			<Title class="text-white">
+				حقق نجاحاتك وارفع من نسب انجازاتك مع نظام وثيق</Title
+			>
+			<p>
+				تمتع بتجربة النظام مجاناً يمكنك تصفح النظام قم بإدخال البيانات
+				التالية:
+			</p>
+			<p>اسم المستخدم: demo@wathik.com</p>
+			<p>كلمة المرور: 123123123</p>
+			<Button
+				href="https://demo.wathik.com"
+				target="_blank"
+				class="text-primary bg-white hover:bg-primary hover:text-white"
+				>إبدأ بتجربة النظام مجاناً</Button
+			>
+		</section>
+		<!-- Contact Section  -->
+		<section id="contact" class="pt-8 pb-16">
+			<div class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div class="flex flex-col items-start gap-4">
+					<SubTitle class="bg-accent text-white"
+						>مميزات النظام</SubTitle
+					>
+					<Title class="text-primary"
+						>تجربة رقمية متكاملة لشركات السفر والنقل</Title
+					>
+					<ul>
+						<li class="flex items-center gap-2">
+							<Checkbox
+								class="text-primary w-5 h-5 inline-block"
+							/>
+							تعدد الوجهات والعملات
+						</li>
+						<li class="flex items-center gap-2">
+							<Checkbox
+								class="text-primary w-5 h-5 inline-block"
+							/>
+							سهولة الوصول من الجوال
+						</li>
+						<li class="flex items-center gap-2">
+							<Checkbox
+								class="text-primary w-5 h-5 inline-block"
+							/>
+							إدارة الصلاحيات
+						</li>
+						<li class="flex items-center gap-2">
+							<Checkbox
+								class="text-primary w-5 h-5 inline-block"
+							/>
+							تدريب ودعم فني
+						</li>
+						<li class="flex items-center gap-2">
+							<Checkbox
+								class="text-primary w-5 h-5 inline-block"
+							/>
+							ضمان الحماية والأمان
+						</li>
+					</ul>
+				</div>
+				<div
+					class="flex flex-col items-start gap-4 p-12 shadow-2xl rounded-tl-3xl rounded-br-3xl border border-slate-100"
+				>
+					<SubTitle class="bg-accent text-white">للإشتراك</SubTitle>
+					<Title class="text-primary">تواصل معنا</Title>
+					<ul>
+						<li class="">
+							<a
+								class="flex items-center gap-2"
+								href="tel:779717753"
+							>
+								<Phone
+									class="text-primary w-5 h-5 inline-block"
+								/>
+								<span dir="ltr">+967 779 717 753</span>
+							</a>
+						</li>
+						<li class="">
+							<a
+								class="flex items-center gap-2"
+								href="mailto:info@balaqytech.com"
+							>
+								<Email
+									class="text-primary w-5 h-5 inline-block"
+								/>
+								info@balaqytech.com
+							</a>
+						</li>
+					</ul>
+					<div class="flex items-center gap-5">
+						<a
+							href="https://www.facebook.com/wathiksoft"
+							target="_blank"
+							class="text-white bg-primary hover:bg-accent p-2 rounded-full"
+						>
+							<Facebook class="w-4 h-4" />
+						</a>
+						<a
+							href="https://www.youtube.com/playlist?list=PLgt1J6DmV9aI_NwUeTO97EhjYwPG_0fFx"
+							target="_blank"
+							class="text-white bg-primary hover:bg-accent p-2 rounded-full"
+						>
+							<Youtube class="w-4 h-4" />
+						</a>
+						<a
+							href="https://api.whatsapp.com/send?phone=967779717753"
+							target="_blank"
+							class="text-white bg-primary hover:bg-accent p-2 rounded-full"
+						>
+							<Whatsapp class="w-4 h-4" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>

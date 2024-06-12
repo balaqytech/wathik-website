@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'GESS';
+  src: url('/fonts/GESSTwoLight-Light-edited.ttf')format('ttf');
+  src: url('/fonts/GESSTwoLight-Light-edited.woff')format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'GESS';
+  src: url('/fonts/GESSTwoMedium-Medium-edited.ttf')format('ttf');
+  src: url('/fonts/GESSTwoMedium-Medium-edited.woff')format('woff');
+  font-weight: 600;
+}
+
+body{
+  @apply font-sans text-slate-600 text-base
+}
+
+a:hover{
+  @apply underline
+}
+
+.wrapper{
+  @apply container max-w-6xl px-5 py-12 mx-auto
+}
+
+h1{
+  @apply font-bold text-primary text-2xl lg:text-3xl mb-8
+}
+
+h2{
+  @apply font-bold text-primary text-xl lg:text-2xl my-4
+}
+
+p{
+  @apply mb-3
+}
