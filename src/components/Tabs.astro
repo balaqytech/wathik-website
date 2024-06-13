@@ -1,0 +1,85 @@
+---
+import Button from "./Button.astro";
+import Title from "./Title.astro";
+---
+
+<div x-data="{ currentTab: 1 }" class="w-full">
+    <div class="flex flex-col sm:flex-row flex-wrap justify-stretch items-stretch gap-2">
+        <Button
+            class="cursor-pointer flex-grow" :class="(currentTab === 1) ? 'bg-accent text-white' :'bg-gray-100 text-slate-600'"
+            @click="currentTab = 1"
+        >
+        إدارة الفواتير
+        </Button>
+        <Button
+            class="cursor-pointer flex-grow" :class="(currentTab === 2) ? 'bg-accent text-white' :'bg-gray-100 text-slate-600'"
+            @click="currentTab = 2"
+        >
+            إدارة المصروفات والمقبوضات
+        </Button>
+        <Button
+            class="cursor-pointer flex-grow" :class="(currentTab === 3) ? 'bg-accent text-white' :'bg-gray-100 text-slate-600'"
+            @click="currentTab = 3"
+        >
+            إدارة الرحلات
+        </Button>
+        <Button
+            class="cursor-pointer flex-grow" :class="(currentTab === 4) ? 'bg-accent text-white' :'bg-gray-100 text-slate-600'"
+            @click="currentTab = 4"
+        >
+            التقارير
+        </Button>
+        <Button
+            class="cursor-pointer flex-grow" :class="(currentTab === 5) ? 'bg-accent text-white' :'bg-gray-100 text-slate-600'"
+            @click="currentTab = 5"
+        >
+            المزيد
+        </Button>
+    </div>
+    <div>
+        <div x-show="currentTab === 1">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-12">
+                <div>
+                    <Title>إدارة الفواتير</Title>
+                    <p>إدارة الفواتير وتصنيفاتها (حج، عمرة، فيزة، تذاكر داخلية أو خارجية تذكرة طيران، بريد، تأشيرة عمل أو زيارة، آخرى..)  على حسب التاريخ، الوصول إليها بسلاسة وسهولة عن طريق (رقم الفاتورة، نوع الفاتورة اسم العميل أو الهاتف حالة الدفع) نقطة بيع سهلة وسريعة، إضافة وكلاء، فواتير مرتجعة، فلترة المبيعات، إضافة أكثر من مسافر في فاتورة واحدة، طباعة ومشاركة الفاتورة.</p>
+                </div>
+                <img src="/images/demo-wathik-invoices.jpg" alt="">
+            </div>
+        </div>
+        <div x-show="currentTab === 2">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-12">
+                <div>
+                    <Title>إدارة المقبوضات والمصروفات</Title>
+                    <p>إدارة الفواتير وتصنيفاتها (حج، عمرة، فيزة، تذاكر داخلية أو خارجية تذكرة طيران، بريد، تأشيرة عمل أو زيارة، آخرى..)  على حسب التاريخ، الوصول إليها بسلاسة وسهولة عن طريق (رقم الفاتورة، نوع الفاتورة اسم العميل أو الهاتف حالة الدفع) نقطة بيع سهلة وسريعة، إضافة وكلاء، فواتير مرتجعة، فلترة المبيعات، إضافة أكثر من مسافر في فاتورة واحدة، طباعة ومشاركة الفاتورة.</p>
+                </div>
+                <img src="/images/demo-wathik-invoices.jpg" alt="">
+            </div>
+        </div>
+        <div x-show="currentTab === 3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-12">
+                <div>
+                    <Title>إدارة الرحلات</Title>
+                    <p>إدارة الفواتير وتصنيفاتها (حج، عمرة، فيزة، تذاكر داخلية أو خارجية تذكرة طيران، بريد، تأشيرة عمل أو زيارة، آخرى..)  على حسب التاريخ، الوصول إليها بسلاسة وسهولة عن طريق (رقم الفاتورة، نوع الفاتورة اسم العميل أو الهاتف حالة الدفع) نقطة بيع سهلة وسريعة، إضافة وكلاء، فواتير مرتجعة، فلترة المبيعات، إضافة أكثر من مسافر في فاتورة واحدة، طباعة ومشاركة الفاتورة.</p>
+                </div>
+                <img src="/images/demo-wathik-invoices.jpg" alt="">
+            </div>
+        </div>
+        <div x-show="currentTab === 4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-12">
+                <div>
+                    <Title>التقارير</Title>
+                    <p>إدارة الفواتير وتصنيفاتها (حج، عمرة، فيزة، تذاكر داخلية أو خارجية تذكرة طيران، بريد، تأشيرة عمل أو زيارة، آخرى..)  على حسب التاريخ، الوصول إليها بسلاسة وسهولة عن طريق (رقم الفاتورة، نوع الفاتورة اسم العميل أو الهاتف حالة الدفع) نقطة بيع سهلة وسريعة، إضافة وكلاء، فواتير مرتجعة، فلترة المبيعات، إضافة أكثر من مسافر في فاتورة واحدة، طباعة ومشاركة الفاتورة.</p>
+                </div>
+                <img src="/images/demo-wathik-invoices.jpg" alt="">
+            </div>
+        </div>
+        <div x-show="currentTab === 5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 py-12">
+                <div>
+                    <p>إدارة الفواتير وتصنيفاتها (حج، عمرة، فيزة، تذاكر داخلية أو خارجية تذكرة طيران، بريد، تأشيرة عمل أو زيارة، آخرى..)  على حسب التاريخ، الوصول إليها بسلاسة وسهولة عن طريق (رقم الفاتورة، نوع الفاتورة اسم العميل أو الهاتف حالة الدفع) نقطة بيع سهلة وسريعة، إضافة وكلاء، فواتير مرتجعة، فلترة المبيعات، إضافة أكثر من مسافر في فاتورة واحدة، طباعة ومشاركة الفاتورة.</p>
+                </div>
+                <img src="/images/demo-wathik-invoices.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>

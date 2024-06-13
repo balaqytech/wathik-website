@@ -2,7 +2,7 @@
 const {href, class: additionalClasses, ...props } = Astro.props;
 
 // Default classes for the button
-const defaultClasses = "font-bold px-12 py-4 rounded-tl-lg rounded-br-lg transition-colors";
+const defaultClasses = "px-12 py-4 rounded-tl-lg rounded-br-lg transition-colors";
 const combinedClasses = `${defaultClasses} ${additionalClasses ?? ""}`;
 ---
 <a href={href} class={combinedClasses} {...props}>

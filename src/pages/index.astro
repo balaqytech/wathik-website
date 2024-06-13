@@ -10,6 +10,7 @@ import Facebook from "../components/Facebook.astro";
 import Youtube from "../components/Youtube.astro";
 import Whatsapp from "../components/Whatsapp.astro";
 import Client from "../components/Client.astro";
+import Tabs from "../components/Tabs.astro";
 ---
 
 <Layout title="نظام وثيق.">
@@ -20,10 +21,10 @@ import Client from "../components/Client.astro";
 			class="flex flex-col justify-center items-center gap-8 bg-gradient-to-b from-primary to-accent min-h-screen pt-52 pb-96 px-4"
 		>
 			<div
-				class="flex flex-col justify-center items-center gap-8 max-w-2xl"
+				class="flex flex-col justify-center items-center gap-4 max-w-2xl"
 			>
 				<SubTitle class="bg-white text-primary"> نظام وثيق </SubTitle>
-				<h1 class="text-white font-bold text-3xl">
+				<h1 class="text-white font-bold text-3xl mb-0">
 					وثيق.. النظام الأكثر ثقة
 				</h1>
 				<p class="text-gray-200 text-center">
@@ -64,6 +65,7 @@ import Client from "../components/Client.astro";
 				<Title class="text-primary"
 					>نظام مصمم بشكل متناسب لـجميع مكاتب السفر والنقل</Title
 				>
+				<Tabs></Tabs>
 			</div>
 		</section>
 		<!-- Clients Sections -->
@@ -73,7 +75,7 @@ import Client from "../components/Client.astro";
 			style="background-image: url(/images/pattern-background.jpg); background-size: 350px;"
 		>
 			<div
-				class="wrapper grid grid-cols-1 lg:grid-cols-2 items-center gap-16"
+				class="wrapper flex flex-col-reverse lg:flex-row justify-between items-center gap-16"
 			>
 				<div class="flex flex-col items-start gap-4">
 					<SubTitle class="bg-white text-primary">عملاؤنا</SubTitle>
@@ -81,15 +83,15 @@ import Client from "../components/Client.astro";
 						الخيار الأول والأفضل لإدارة شركات السفريات والسياحة
 						والأيدي العاملة
 					</Title>
-					<p class="text-slate-200 text-justify">
+					<p class="text-slate-200 ">
 						بضغطة زر أنشئ فواتير واستخرج تقاريرك وسجل مقبوضاتك وحدد
 						المصروفات وتابع حركة الصندوق من نفس النظام وبسلاسة تامة.
 					</p>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+					<div class="w-full grid grid-cols-2 items-stretch gap-8">
 						<div
 							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
 						>
-							<div class="text-primary text-7xl font-bold">
+							<div class="text-primary text-7xl font-medium">
 								50+
 							</div>
 							<span>عميل</span>
@@ -97,14 +99,14 @@ import Client from "../components/Client.astro";
 						<div
 							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
 						>
-							<div class="text-primary text-7xl font-bold">
-								50+
+							<div class="text-primary text-7xl font-medium">
+								99%
 							</div>
-							<span>عميل</span>
+							<span>رضا العملاء</span>
 						</div>
 					</div>
 				</div>
-				<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+				<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
 					<Client src="/images/clients/client-1.jpg" />
 					<Client src="/images/clients/client-2.jpg" />
 					<Client src="/images/clients/client-3.jpg" />
@@ -115,47 +117,49 @@ import Client from "../components/Client.astro";
 			</div>
 		</section>
 		<!-- Roles Section -->
-		<section class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-16">
-			<div>
-				<img src="/images/demo-wathik-invoices.jpg" alt="" />
-			</div>
-			<div class="flex flex-col items-start gap-4">
-				<SubTitle class="bg-accent text-white">الأدوار</SubTitle>
-				<Title class="text-primary"
-					>سرّع من وتيرة أعمالك مع مساعدك الذكي (نظام وثيق)</Title
-				>
-				<ul>
-					<li class="flex items-start gap-2">
-						<span class="text-primary w-5 h-5 flex relative top-1">
-							<Checkbox />
-						</span>
-						اختصر وقتك وجهدك وأدر عدد من الفواتير المختلفة
-					</li>
-					<li class="flex items-start gap-2">
-						<span class="text-primary w-5 h-5 flex relative top-1">
-							<Checkbox />
-						</span>
-						تتبع جميع العمليات والتقارير المتكاملة لحركة المبيعات اليومية
-					</li>
-					<li class="flex items-start gap-2">
-						<span class="text-primary w-5 h-5 flex relative top-1">
-							<Checkbox />
-						</span>
-						خصص واضبط مقبوضات ومصروفات الشركة
-					</li>
-					<li class="flex items-start gap-2">
-						<span class="text-primary w-5 h-5 flex relative top-1">
-							<Checkbox />
-						</span>
-						أصدر بيانات الرحلات وحدد قوائم المسافرين
-					</li>
-					<li class="flex items-start gap-2">
-						<span class="text-primary w-5 h-5 flex relative top-1">
-							<Checkbox />
-						</span>
-						أضف عدد من وكلات السفر والوجهات
-					</li>
-				</ul>
+		<section class="my-12">
+			<div class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-16">
+				<div>
+					<img src="/images/demo-wathik-invoices.jpg" alt="" />
+				</div>
+				<div class="flex flex-col items-start gap-4">
+					<SubTitle class="bg-accent text-white">الأدوار</SubTitle>
+					<Title class="text-primary"
+						>سرّع من وتيرة أعمالك مع مساعدك الذكي (نظام وثيق)</Title
+					>
+					<ul>
+						<li class="flex items-start gap-2">
+							<span class="text-primary w-5 h-5 flex relative top-1">
+								<Checkbox />
+							</span>
+							اختصر وقتك وجهدك وأدر عدد من الفواتير المختلفة
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-primary w-5 h-5 flex relative top-1">
+								<Checkbox />
+							</span>
+							تتبع جميع العمليات والتقارير المتكاملة لحركة المبيعات اليومية
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-primary w-5 h-5 flex relative top-1">
+								<Checkbox />
+							</span>
+							خصص واضبط مقبوضات ومصروفات الشركة
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-primary w-5 h-5 flex relative top-1">
+								<Checkbox />
+							</span>
+							أصدر بيانات الرحلات وحدد قوائم المسافرين
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-primary w-5 h-5 flex relative top-1">
+								<Checkbox />
+							</span>
+							أضف عدد من وكلات السفر والوجهات
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<!-- Demo Section -->
