@@ -14,7 +14,7 @@ import Tabs from "../components/Tabs.astro";
 import ShapeDivider from "../components/ShapeDivider.astro";
 ---
 
-<Layout title="نظام وثيق.">
+<Layout title="نظام وثيق - لإدارة وكالات السفريات والسياحة">
 	<main>
 		<!-- Home Section -->
 		<section
@@ -24,11 +24,20 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 			<div
 				class="relative flex flex-col justify-center items-center gap-4 max-w-2xl"
 			>
-				<SubTitle class="bg-white text-primary"> نظام وثيق </SubTitle>
-				<h1 class="text-white font-bold text-3xl mb-0">
+				<SubTitle class="bg-white text-primary" data-aos="fade-up"
+				data-aos-duration="500"
+				data-aos-delay="100"> نظام وثيق </SubTitle>
+				<h1
+					class="text-white font-bold text-3xl mb-0"
+					data-aos="fade-up"
+					data-aos-duration="500"
+					data-aos-delay="200"
+				>
 					وثيق.. النظام الأكثر ثقة
 				</h1>
-				<p class="text-gray-200 text-center">
+				<p class="text-gray-200 text-center" data-aos="fade-up"
+				data-aos-duration="500"
+				data-aos-delay="300">
 					نظام وثيق صمم خصيصاً ليتناسب مع احتياجات ومتطلبات وكالات
 					السفريات والسياحة والحج والعمرة، يتيح لك النظام تحكم كامل في
 					فواتيرك، إدارة السندات والمقبوضات والمصروفات، وإدارة الرحلات
@@ -38,13 +47,41 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 				<div
 					class="container flex flex-col lg:flex-row justify-around items-center gap-8"
 				>
-					<Button href="#demo" class="text-primary bg-white hover:bg-primary hover:text-white flex gap-1">
+					<Button
+						href="#demo"
+						class="text-primary bg-white hover:bg-primary hover:text-white flex gap-1"
+						data-aos="fade-up"
+					data-aos-duration="500"
+					data-aos-delay="500"
+					>
 						<span>تجربة النظام</span>
-						<svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 11V8L15 12L10 16V13H1V11H10ZM2.4578 15H4.58152C5.76829 17.9318 8.64262 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C8.64262 4 5.76829 6.06817 4.58152 9H2.4578C3.73207 4.94289 7.52236 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C7.52236 22 3.73207 19.0571 2.4578 15Z"></path></svg>
+						<svg
+							class="w-5"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							><path
+								d="M10 11V8L15 12L10 16V13H1V11H10ZM2.4578 15H4.58152C5.76829 17.9318 8.64262 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C8.64262 4 5.76829 6.06817 4.58152 9H2.4578C3.73207 4.94289 7.52236 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C7.52236 22 3.73207 19.0571 2.4578 15Z"
+							></path></svg
+						>
 					</Button>
-					<Button href="#" class="text-white bg-gray-700 hover:bg-primary hover:text-white flex gap-1">
+					<Button
+						href="#"
+						class="text-white bg-gray-700 hover:bg-primary hover:text-white flex gap-1"
+						data-aos="fade-up"
+					data-aos-duration="500"
+					data-aos-delay="600"
+					>
 						<span>فيديو تعريفي</span>
-						<svg class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.9934C3 3.44476 3.44495 3 3.9934 3H20.0066C20.5552 3 21 3.44495 21 3.9934V20.0066C21 20.5552 20.5551 21 20.0066 21H3.9934C3.44476 21 3 20.5551 3 20.0066V3.9934ZM10.6219 8.41459C10.5562 8.37078 10.479 8.34741 10.4 8.34741C10.1791 8.34741 10 8.52649 10 8.74741V15.2526C10 15.3316 10.0234 15.4088 10.0672 15.4745C10.1897 15.6583 10.4381 15.708 10.6219 15.5854L15.5008 12.3328C15.5447 12.3035 15.5824 12.2658 15.6117 12.2219C15.7343 12.0381 15.6846 11.7897 15.5008 11.6672L10.6219 8.41459Z"></path></svg>
+						<svg
+							class="w-5"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							><path
+								d="M3 3.9934C3 3.44476 3.44495 3 3.9934 3H20.0066C20.5552 3 21 3.44495 21 3.9934V20.0066C21 20.5552 20.5551 21 20.0066 21H3.9934C3.44476 21 3 20.5551 3 20.0066V3.9934ZM10.6219 8.41459C10.5562 8.37078 10.479 8.34741 10.4 8.34741C10.1791 8.34741 10 8.52649 10 8.74741V15.2526C10 15.3316 10.0234 15.4088 10.0672 15.4745C10.1897 15.6583 10.4381 15.708 10.6219 15.5854L15.5008 12.3328C15.5447 12.3035 15.5824 12.2658 15.6117 12.2219C15.7343 12.0381 15.6846 11.7897 15.5008 11.6672L10.6219 8.41459Z"
+							></path></svg
+						>
 					</Button>
 				</div>
 			</div>
@@ -56,18 +93,19 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 				class="rounded-xl z-30 border-4 border-white shadow-lg -mt-32 lg:-mt-80"
 				src="/images/demo-wathik-invoices.jpg"
 				alt="لوحة التحكم في نظام وثيق"
+				data-aos="zoom-in"
+					data-aos-duration="500"
+					data-aos-anchor-placement="center-bottom"
 			/>
 		</section>
 		<!-- Features Section  -->
-		<section
-			id="features"
-		>
+		<section id="features">
 			<div class="wrapper flex flex-col justify-center items-center">
 				<SubTitle class="bg-accent text-white"> خصائص النظام</SubTitle>
 				<Title class="text-primary"
 					>نظام مصمم بشكل متناسب لـجميع مكاتب السفر والنقل</Title
 				>
-				<Tabs></Tabs>
+				<Tabs />
 			</div>
 		</section>
 		<!-- Clients Sections -->
@@ -85,7 +123,7 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 						الخيار الأول والأفضل لإدارة شركات السفريات والسياحة
 						والأيدي العاملة
 					</Title>
-					<p class="text-slate-200 ">
+					<p class="text-slate-200">
 						بضغطة زر أنشئ فواتير واستخرج تقاريرك وسجل مقبوضاتك وحدد
 						المصروفات وتابع حركة الصندوق من نفس النظام وبسلاسة تامة.
 					</p>
@@ -101,7 +139,9 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 						<div
 							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
 						>
-							<div class="text-primary text-7xl font-medium counter">
+							<div
+								class="text-primary text-7xl font-medium counter"
+							>
 								<span class="counter">99</span>%
 							</div>
 							<span>رضا العملاء</span>
@@ -122,7 +162,10 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 		<section class="my-12">
 			<div class="wrapper grid grid-cols-1 lg:grid-cols-2 gap-16">
 				<div>
-					<img src="/images/183-1024x683.jpg" alt="الصلاحيات والأدوار في نظام وثيق" />
+					<img
+						src="/images/183-1024x683.jpg"
+						alt="الصلاحيات والأدوار في نظام وثيق"
+					/>
 				</div>
 				<div class="flex flex-col items-start gap-4">
 					<SubTitle class="bg-accent text-white">الأدوار</SubTitle>
@@ -131,31 +174,42 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 					>
 					<ul>
 						<li class="flex items-start gap-2">
-							<span class="text-primary w-5 h-5 flex relative top-1">
+							<span
+								class="text-primary w-5 h-5 flex relative top-1"
+							>
 								<Checkbox />
 							</span>
 							اختصر وقتك وجهدك وأدر عدد من الفواتير المختلفة
 						</li>
 						<li class="flex items-start gap-2">
-							<span class="text-primary w-5 h-5 flex relative top-1">
+							<span
+								class="text-primary w-5 h-5 flex relative top-1"
+							>
 								<Checkbox />
 							</span>
-							تتبع جميع العمليات والتقارير المتكاملة لحركة المبيعات اليومية
+							تتبع جميع العمليات والتقارير المتكاملة لحركة المبيعات
+							اليومية
 						</li>
 						<li class="flex items-start gap-2">
-							<span class="text-primary w-5 h-5 flex relative top-1">
+							<span
+								class="text-primary w-5 h-5 flex relative top-1"
+							>
 								<Checkbox />
 							</span>
 							خصص واضبط مقبوضات ومصروفات الشركة
 						</li>
 						<li class="flex items-start gap-2">
-							<span class="text-primary w-5 h-5 flex relative top-1">
+							<span
+								class="text-primary w-5 h-5 flex relative top-1"
+							>
 								<Checkbox />
 							</span>
 							أصدر بيانات الرحلات وحدد قوائم المسافرين
 						</li>
 						<li class="flex items-start gap-2">
-							<span class="text-primary w-5 h-5 flex relative top-1">
+							<span
+								class="text-primary w-5 h-5 flex relative top-1"
+							>
 								<Checkbox />
 							</span>
 							أضف عدد من وكلات السفر والوجهات
@@ -287,34 +341,41 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 	</main>
 </Layout>
 <script>
-	import counterUp from 'counterup2'; 
-	
-	document.addEventListener('DOMContentLoaded', () => {
-    // Select all elements with the class .counter
-    const counters = document.querySelectorAll('.counter');
+	import counterUp from "counterup2";
+	import AOS from "aos";
+	import "aos/dist/aos.css";
+	AOS.init({
+		startEvent: "DOMContentLoaded",
+	});
 
-    // Create an Intersection Observer instance
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // When the element is in the viewport, start the counter animation
-                counterUp(entry.target, {
-                    duration: 1000,
-                    delay: 16,
-                });
+	document.addEventListener("DOMContentLoaded", () => {
+		// Select all elements with the class .counter
+		const counters = document.querySelectorAll(".counter");
 
-                // Once the animation is triggered, unobserve the element
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 1.0 // Adjust threshold as needed
-    });
+		// Create an Intersection Observer instance
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// When the element is in the viewport, start the counter animation
+						counterUp(entry.target, {
+							duration: 1000,
+							delay: 16,
+						});
 
-    // Observe each counter element
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
-});
+						// Once the animation is triggered, unobserve the element
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 1.0, // Adjust threshold as needed
+			},
+		);
 
+		// Observe each counter element
+		counters.forEach((counter) => {
+			observer.observe(counter);
+		});
+	});
 </script>
