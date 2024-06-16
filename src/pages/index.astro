@@ -94,15 +94,15 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
 						>
 							<div class="text-primary text-7xl font-medium">
-								50+
+								<span class="counter">50</span>+
 							</div>
 							<span>عميل</span>
 						</div>
 						<div
 							class="bg-white rounded-tl-2xl rounded-br-2xl px-6 py-12 flex flex-col justify-center items-center"
 						>
-							<div class="text-primary text-7xl font-medium">
-								99%
+							<div class="text-primary text-7xl font-medium counter">
+								<span class="counter">99</span>%
 							</div>
 							<span>رضا العملاء</span>
 						</div>
@@ -286,3 +286,34 @@ import ShapeDivider from "../components/ShapeDivider.astro";
 		</section>
 	</main>
 </Layout>
+<script>
+	import counterUp from 'counterup2'; 
+	document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements with the class .counter
+    const counters = document.querySelectorAll('.counter');
+
+    // Create an Intersection Observer instance
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // When the element is in the viewport, start the counter animation
+                counterUp(entry.target, {
+                    duration: 1000,
+                    delay: 16,
+                });
+
+                // Once the animation is triggered, unobserve the element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 1.0 // Adjust threshold as needed
+    });
+
+    // Observe each counter element
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+
+</script>
