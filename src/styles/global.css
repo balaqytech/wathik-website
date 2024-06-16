@@ -3,12 +3,14 @@
   src: url('/fonts/GESSTwoLight-Light-edited.ttf')format('ttf');
   src: url('/fonts/GESSTwoLight-Light-edited.woff')format('woff');
   font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'GESS';
   src: url('/fonts/GESSTwoMedium-Medium-edited.ttf')format('ttf');
   src: url('/fonts/GESSTwoMedium-Medium-edited.woff')format('woff');
   font-weight: 600;
+  font-display: swap;
 }
 
 body{
